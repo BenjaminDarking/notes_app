@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     list.addNote(new Note(text))
     var ul = document.getElementById("list");
     var li = document.createElement("li");
-    li.appendChild(document.createTextNode(list.showNotes()[list.showNotes().length - 1].printNote()));
+    li.appendChild(document.createTextNode(list.showNotes()[list.showNotes().length - 1].abbreviate()));
     ul.appendChild(li);
   });
   //
