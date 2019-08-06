@@ -11,9 +11,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     list.addNote(new Note(text));
     var ul = document.getElementById("list");
     var li = document.createElement("a");
+    li.innerHTML = "<li id ='0'></li>"
+
     li.href = '#' + list.showNotes()[list.showNotes().length - 1].abbreviate();
     li.appendChild(document.createTextNode(list.showNotes()[list.showNotes().length - 1].abbreviate()));
     ul.appendChild(li);
+    console.log(list)
+  });
+
+  document.getElementById('0').addEventListener('click', function(e) {
+    e.preventDefault();
+    changeUrlForNote();
   });
 
 
@@ -30,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   };
 
   function showNote(note) {
-    document.getElementById('note').innerHTML = note;
+    document.getElementById('0').innerHTML = note;
   };
   //
   // document.getElementById("textBox").change(function() {
