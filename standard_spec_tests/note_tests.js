@@ -9,5 +9,16 @@
     }
   };
 
+  function testAbbreviateNote(){
+    var note = new Note("abcdefghijklmnopqrstuvwxyz");
+
+    if (note.abbreviate() === "abcdefghijklmnopqrst") {
+      console.log("Test passed mofo")
+    } else {
+      throw new Error("Test abbrev note failed");
+    }
+  };
+
   testCreateNote();
+  testAbbreviateNote();
 })(this);
