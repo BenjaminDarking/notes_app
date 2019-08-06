@@ -30,10 +30,11 @@
     list.addNote(test);
     list.addNote(test1);
 
-    if (list.showNotes() === "test \n test 1") {
+    if (list.showNotes()[0] === test && list.showNotes()[1] === test1) {
       console.log("Test passed mofo")
     } else {
-      throw new Error("Test add note to list failed");
+      console.log(list.showNotes())
+      throw new Error("Test show notes failed");
     };
   };
   testShowNotes();
