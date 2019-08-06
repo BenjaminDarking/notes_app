@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     list.addNote(new Note(text))
     var ul = document.getElementById("list");
     var li = document.createElement("li");
-    li.appendChild(document.createTextNode(list.showNotes()[0].printNote()));
+    li.appendChild(document.createTextNode(list.showNotes()[list.showNotes().length - 1].printNote()));
     ul.appendChild(li);
   });
   //
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // })
 
 
-  // 
+  //
   // var ul = document.getElementById("notes");
   // var items = ul.getElementByTagName("li");
   // for (var i = 0; i < items.length; ++i) {
