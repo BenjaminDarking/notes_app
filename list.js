@@ -11,5 +11,11 @@ List.prototype.showNotes = function() {
   return this.listArray
 }
 
+List.prototype.getNoteById = function(id) {
+  return this.listArray.find(function(note) {
+    return note.id === id;
+  });
+}
+
   exports.List = List;
 })(this);
