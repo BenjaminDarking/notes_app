@@ -37,6 +37,26 @@
       throw new Error("Test show notes failed");
     };
   };
+
+  function testGetNoteById() {
+    var list = new List();
+    var noteOne = {
+      id: "1234"
+    };
+    var noteTwo = {
+      id: "4321"
+    };
+
+    list.addNote(noteOne);
+    list.addNote(noteTwo);
+
+    if (list.getNoteById("1234") === noteOne) {
+      console.log("Test passed mofo")
+    } else {
+      throw new Error("Test GetNoteById failed");
+    };
+  };
+  testGetNoteById();
   testShowNotes();
   testCreateList();
   testAddNoteToList();

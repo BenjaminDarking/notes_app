@@ -1,6 +1,7 @@
 (function(exports) {
   function Note(text) {
     this.noteText = text;
+    this.id = Date.now().toString() // Not ideal solution as potential of duplicate ids
   };
 
   Note.prototype.printNote = function() {
