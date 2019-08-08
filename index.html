@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <link rel="stylesheet" type="text/css" href="notes.css">
   <title>Notes</title>
   <script src="list.js"></script>
   <script src="note.js"></script>
@@ -9,15 +10,23 @@
 </head>
 
 <body>
-  <h1> Notes </h1>
-  <form>
-    <textarea rows="8" cols="24" id="textBox" name="note-text" placeholder="Write your note here..."></textarea><br>
-    <input type="submit" id="create" value="Create Note"></input>
-  </form>
-  <ul id="list">
-  </ul>
+  <div class="header-site">
+    <center>
+      <br />
+      <br />
+      <h1> Notes </h1>
+      <form>
+        <textarea rows="10" cols="30" id="textBox" name="note-text" placeholder="Write your note here..."></textarea><br>
+        <input type="submit" id="create" value="Create Note"></input>
+      </form>
 
-  <div id="note"></div>
-
+      <br />
+      <br />
+      <div>
+        <ul id="list">
+        </ul>
+        <div id="note"></div>
+      </div>
+  </div>
 
 </body>
